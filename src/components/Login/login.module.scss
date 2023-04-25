@@ -1,0 +1,62 @@
+
+.container{
+    max-width: 1920px;
+    height: 100vh;
+    min-width: 400px;
+    margin: auto; 
+    
+}
+.mainContainer, .inputContainer{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+   
+
+}
+.inputContainer{
+    flex-direction: column;
+    gap: 30px;
+    h1, p{
+        color: #ffffff;
+        font-size: 4rem;
+        text-align: center;
+        font-family: "Roboto Mono", monospace;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 2px;  
+    span {
+      color: #c85311;
+    }
+    }
+    p{   
+        
+        font-size: 1.5rem;  
+    }
+    
+}
+
+.imgLogin {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; 
+}
+
+
+@media (max-width: 720px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+
+// //nightmode
+
+// .modeContainer {
+//     background-color: #000000;
+//     h1, h2, h3,h4, h5, h6, p, b, q, a ul, li{
+//     color: #fff !important;
+//     }
+   
+// }
