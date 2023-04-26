@@ -1,12 +1,12 @@
 
 
-import styles from '../input.module.scss';
-
+import styles from './input.module.scss';
+import {FcGoogle} from 'react-icons/fc'
 
 const ButtonLogin = () => {
     return ( 
-        <div>
-            <button>Logar com google</button>
+        <div className={styles.btnContainer}>
+            <button>Entrar com google <FcGoogle /> </button>
         </div>
      );
 }

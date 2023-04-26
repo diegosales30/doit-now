@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../Login/login.module.scss";
 
 import loginSvg from "../../assets/login.svg";
+import ButtonLogin from "../ButtonLogin";
 
 const Login = () => {
   return (
@@ -10,8 +11,8 @@ const Login = () => {
       <div className={styles.mainContainer}>
         <div className={styles.inputContainer}>
           <h1>Do<span>.</span>it Now</h1>
-          <p>Organize-se suas tarefas de forma fácil e efetiva</p>
-          <button>Entrar com google</button>
+          <p>Organize suas tarefas de forma fácil e efetiva</p>
+          <ButtonLogin />
         </div>
         <Image className={styles.imgLogin} src={loginSvg} alt="img de login" />
       </div>

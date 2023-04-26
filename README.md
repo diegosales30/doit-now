@@ -7,6 +7,7 @@ dependencias
 
 ```
     npm install sass
+    npm install react-icons
 
 
 ```
