@@ -1,0 +1,37 @@
+
+
+.container {
+    max-width: 1280px;
+    min-width: 400px;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    background-color: #125688;
+    svg{
+        font-size: 1.6rem;
+        color: aliceblue;   
+    }
+}
+
+.profileContainer{
+
+    display: flex;
+    align-items: center;
+    svg{
+        margin-left: 10px;
+    }
+    p{
+        font-size: 1.2rem;
+        color: aliceblue;
+        margin-left: 2px;
+    }
+}
+.logoutContainer{
+    svg{
+        margin-right: 10px;
+    }
+    cursor: pointer;
+}
