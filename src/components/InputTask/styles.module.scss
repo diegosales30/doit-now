@@ -1,1 +1,36 @@
 
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.formContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 5px;
+    margin-top: 1rem;
+    input{
+        width: 95%;
+        height: 2.8rem;
+        margin-left: 3px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        &:placeholder-shown{
+            padding: 10px;
+            font-size: 1.1rem;
+            font-family: "Roboto Mono", monospace;
+        }
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        svg{
+            font-size: 1.9rem;
+            color: aliceblue;
+        }
+    }
+}
