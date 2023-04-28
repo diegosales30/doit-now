@@ -39,7 +39,7 @@ Para executar o projeto localmente, basta seguir os passos abaixo:
 
 sh
 
-git clone https://github.com/seu-usuario/it-now.git
+git clone git@github.com:diegosales30/doit-now.git
 
     Instalar as dependências:
 
@@ -56,7 +56,7 @@ sh
 
 npm run dev
 
-A aplicação estará disponível em http://localhost:3000.
+A aplicação estará disponível em https://doit-now.vercel.app/
 Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
