@@ -2,6 +2,7 @@
   "name": "doit-now",
   "version": "0.1.0",
   "private": true,
+  "author": "Diego sales",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
