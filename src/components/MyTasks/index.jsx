@@ -1,10 +1,8 @@
 import styles from "./styles.module.scss";
-
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { FcCalendar } from "react-icons/fc";
 import { ImCheckboxUnchecked, ImCheckboxChecked } from "react-icons/im";
 import { FaTasks } from "react-icons/fa";
-
 import { useCallback, useEffect, useState } from "react";
 import {
   collection,
@@ -17,23 +15,19 @@ import {
   where,
 } from "firebase/firestore";
 import { auth, db } from "@/services/firebase";
-
 import { format } from "date-fns";
 import { onAuthStateChanged } from "firebase/auth";
-
 import { toast } from 'react-hot-toast';
+import Link from "next/link";
 
 const MyTasks = () => {
   const [taskDone, setTaskDone] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [user, setUser] = useState(null);
-  
-  
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        
         setUser(user);
       } else {
         setUser(null);
@@ -42,27 +36,27 @@ const MyTasks = () => {
   }, []);
 
   useEffect(() => {
-    const fetchTasks = async () => {
-      if (user) {
-        const tasksRef = collection(db, "tarefas");
-        const q = query(
-          tasksRef,
-          where("userId", "==", user.uid),
-          orderBy("created", "desc")
-        );
-        const querySnapshot = await getDocs(q);
+    if (user) {
+      const tasksRef = collection(db, "tarefas");
+      const q = query(
+        tasksRef,
+        where("userId", "==", user.uid),
+        orderBy("created", "desc")
+      );
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const tasksData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
         setTasks(tasksData);
-      }
-    };
-  
-    fetchTasks();
+      });
+
+      return () => {
+        unsubscribe();
+      };
+    }
   }, [user]);
- 
-  
+
   const deleteTask = async (taskId) => {
     try {
       // Remove a tarefa do estado local
@@ -123,7 +117,10 @@ const MyTasks = () => {
                   <FcCalendar />{" "}
                   {format(current.created.toDate(), "dd/MM/yyyy")}
                 </span>
-                <span>detalhes</span>
+                
+                <Link href={`/details/${current.id}`}>
+                  <span>detalhes</span>
+                </Link>
               </div>
             </li>
           ))}
