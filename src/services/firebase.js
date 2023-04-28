@@ -20,17 +20,17 @@ import "firebase/compat/firestore";
 // };
 const firebaseConfig = {
 
-    apiKey: "AIzaSyCIUST1FM2J5wM4luaFj68WWf0uO6ItXgM",
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   
-    authDomain: "to-do-list-190d6.firebaseapp.com",
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   
-    projectId: "to-do-list-190d6",
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
   
-    storageBucket: "to-do-list-190d6.appspot.com",
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   
-    messagingSenderId: "1036190845446",
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   
-    appId: "1:1036190845446:web:2313b488fb56764296d187",
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   
     measurementId: "G-MZSRTZKBD5"
   
