@@ -18,7 +18,7 @@ const HeaderComponent = () => {
         setUser(null);
       }
     });
-  }, []);
+  }, [user]);
 
   const logout = async () => {
     await signOut(auth);

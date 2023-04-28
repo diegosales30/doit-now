@@ -1,0 +1,42 @@
+
+.container{
+    max-width: 1280px; 
+    margin: auto;
+    margin-top: 20px;
+    background-color: #252525;
+    border-radius: 5px;
+
+    h3, p{
+        font-weight: 300;
+        color: #ffff;
+        padding: 20px;
+    }
+    p{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        svg{
+            margin-right: 10px;
+        }
+    }
+}
+
+.taskContainer{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+
+    svg{
+        color: #ffff;
+        font-size: 2rem;
+        border: none;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+}
+.calenda{
+    display: flex;
+    justify-content: center;
+}

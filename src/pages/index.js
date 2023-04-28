@@ -23,7 +23,7 @@ export default function Home() {
   }, [user]);
 
   if (loading) return <Loading />;
-  if (!user) return <Login />;  // add !
+  if (!user) return <Login />;  
 
   return  <HomeComponent />;
 }
