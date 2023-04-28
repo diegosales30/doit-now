@@ -24,10 +24,17 @@
         margin-left: 10px;
     }
     p{
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 600;
         color: aliceblue;
-        margin-left: 2px;
+        margin-left: 5px;
     }
+}
+.profileImg{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }
 .logoutContainer{
     svg{

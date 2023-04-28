@@ -11,6 +11,7 @@ dependencias
     npm install "email-validator": "2.0.4",
     npm install "firebase": "^9.14.0",
     npm install "react-firebase-hooks": "5.0.3",
+    npm install react-hot-toast
     
 
 ```

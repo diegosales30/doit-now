@@ -18,11 +18,18 @@
         border: none;
         outline: none;
         border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-indent: 10px;
+        color: #252525;
+        
         &:placeholder-shown{
             padding: 10px;
             font-size: 1.1rem;
             font-family: "Roboto Mono", monospace;
+            font-weight: 200;
         }
+        
     }
     button{
         border: none;
